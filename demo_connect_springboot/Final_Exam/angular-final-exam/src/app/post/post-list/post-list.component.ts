@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Post} from '../model/post';
+import {Item} from '../model/item';
 import {PostService} from '../service/post.service';
 import {RegionService} from '../service/region.service';
 import {DirectionService} from '../service/direction.service';
@@ -13,7 +13,7 @@ import {Direction} from '../model/direction';
 })
 export class PostListComponent implements OnInit {
 
-  postList: Post[];
+  postList: Item[];
   page = 1;
   pageSize = 5;
   collectionSize = 0;

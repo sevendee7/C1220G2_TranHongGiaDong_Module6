@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PostService} from '../service/post.service';
 import {RegionService} from '../service/region.service';
 import {DirectionService} from '../service/direction.service';
-import {Post} from '../model/post';
+import {Item} from '../model/item';
 import {Router} from '@angular/router';
 
 @Component({
@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
-  postList: Post[];
+  postList: Item[];
   areaSearch: string = '';
   priceSearch: string = '';
   directionSearch: string = '';

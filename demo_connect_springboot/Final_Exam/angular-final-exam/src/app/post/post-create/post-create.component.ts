@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Direction} from '../model/direction';
-import {Post} from '../model/post';
+import {Item} from '../model/item';
 import {Region} from '../model/region';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {DirectionService} from '../service/direction.service';
@@ -18,7 +18,7 @@ export class PostCreateComponent implements OnInit {
 
   directionList: Direction[];
   regionList: Region[];
-  post: Post;
+  post: Item;
   // submitted: boolean = false;
   public postForm: FormGroup;
   id: number;

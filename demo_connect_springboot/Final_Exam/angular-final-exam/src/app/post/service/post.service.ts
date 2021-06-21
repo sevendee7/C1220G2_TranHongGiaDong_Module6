@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {environment} from '../../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Post} from '../model/post';
+import {Item} from '../model/item';
 
 const API_URL = `${environment.apiUrl}`;
 @Injectable({
@@ -12,28 +12,28 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<Post[]> {
-    return this.http.get<Post[]>(API_URL + '/postList');
+  getAll(): Observable<Item[]> {
+    return this.http.get<Item[]>(API_URL + '/postList');
   }
 
-  getListAfterSearch(area: string, price: string, direction: string): Observable<Post[]> {
-    return this.http.get<Post[]>(API_URL + '/postList?area_like=' + area + '&price_like=' + price + '&direction_like=' + direction);
+  getListAfterSearch(area: string, price: string, direction: string): Observable<Item[]> {
+    return this.http.get<Item[]>(API_URL + '/postList?area_like=' + area + '&price_like=' + price + '&direction_like=' + direction);
   }
 
 
-  savePost(post): Observable<Post> {
-    return this.http.post<Post>(API_URL + '/postList', post);
+  savePost(post): Observable<Item> {
+    return this.http.post<Item>(API_URL + '/postList', post);
   }
 
-  findById(id: number): Observable<Post> {
-    return this.http.get<Post>(`${API_URL}/postList/${id}`);
+  findById(id: number): Observable<Item> {
+    return this.http.get<Item>(`${API_URL}/postList/${id}`);
   }
 
-  updatePost(id: number, post: Post): Observable<Post> {
-    return this.http.put<Post>(`${API_URL}/postList/${id}`, post);
+  updatePost(id: number, post: Item): Observable<Item> {
+    return this.http.put<Item>(`${API_URL}/postList/${id}`, post);
   }
 
-  deletePost(id: number): Observable<Post> {
-    return this.http.delete<Post>(`${API_URL}/postList/${id}`);
+  deletePost(id: number): Observable<Item> {
+    return this.http.delete<Item>(`${API_URL}/postList/${id}`);
   }
 }

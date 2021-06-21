@@ -5,49 +5,54 @@
       <tr>
         <td>Category:</td>
         <td>
-          <input class="form-control" type="text" formControlName="category"/>
+          <select id="category" class="form-control" formControlName="category">
+            <option value="" disabled selected>Choose category</option>
+            <option value="House">House</option>
+            <option value="Land">Land</option>
+            <option value="Apartment">Apartment</option>
+          </select>
         </td>
       </tr>
       <tr>
         <td>Region:</td>
         <td>
           <select id="region" class="form-control" formControlName="region">
-            <option value="" disabled>Choose region</option>
-            <option [ngValue]="re.name" *ngFor="let re of regionList">
-              {{re.name}}
-            </option>
+            <option value="" disabled selected>Choose region</option>
+            <option value="North-Side">North-Side</option>
+            <option value="Mid-Side">Mid-Side</option>
+            <option value="South-Side">South-Side</option>
           </select>
         </td>
       </tr>
       <tr>
         <td> User :</td>
         <td>
-          <input class="ml-5" id="person" type="radio" value="Cá nhân" formControlName="user"/>
-          <label for="person" class="ml-2"> Cá nhân </label>
-          <input id="company" class="ml-5" type="radio" value="Công ty" formControlName="user"/>
-          <label for="company" class="ml-2">Công ty </label>
+          <input class="ml-5" id="person" type="radio" value="personal" formControlName="user"/>
+          <label for="person" class="ml-2"> Personal </label>
+          <input id="company" class="ml-5" type="radio" value="company" formControlName="user"/>
+          <label for="company" class="ml-2">Company </label>
         </td>
       </tr>
       <tr>
         <td> Purpose :</td>
         <td>
-          <input class="ml-5" id="sell" type="radio" value="Cần bán" formControlName="purpose"/>
-          <label for="sell" class="ml-2">Cần bán </label>
-          <input id="buy" class="ml-5" type="radio" value="Cần mua" formControlName="purpose"/>
-          <label for="buy" class="ml-2">Cần mua </label>
-          <input id="forRent" class="ml-5" type="radio" value="Cho thuê" formControlName="purpose"/>
-          <label for="forRent" class="ml-2">Cho thuê </label>
-          <input id="rent" class="ml-5" type="radio" value="Cần Thuê" formControlName="purpose"/>
-          <label for="rent" class="ml-2">Cần Thuê </label>
+          <input class="ml-5" id="sell" type="radio" value="sell" formControlName="purpose"/>
+          <label for="sell" class="ml-2">Sell </label>
+          <input id="buy" class="ml-5" type="radio" value="buy" formControlName="purpose"/>
+          <label for="buy" class="ml-2"> Buy </label>
+          <input id="forRent" class="ml-5" type="radio" value="forRent" formControlName="purpose"/>
+          <label for="forRent" class="ml-2">For rent </label>
+          <input id="rent" class="ml-5" type="radio" value="rent" formControlName="purpose"/>
+          <label for="rent" class="ml-2">Rent </label>
         </td>
       </tr>
       <tr>
         <td> Status :</td>
         <td>
-          <input class="ml-5" id="new" type="radio" value="Mới" formControlName="status"/>
-          <label for="new" class="ml-2">Mới </label>
-          <input id="used" class="ml-5" type="radio" value="Đã sử dụng" formControlName="status"/>
-          <label for="used" class="ml-2">Đã sử dụng </label>
+          <input class="ml-5" id="new" type="radio" value="new" formControlName="status"/>
+          <label for="new" class="ml-2">New </label>
+          <input id="used" class="ml-5" type="radio" value="likeNew" formControlName="status"/>
+          <label for="used" class="ml-2">Like new </label>
         </td>
       </tr>
       <tr>
@@ -85,10 +90,11 @@
         <td>Direction:</td>
         <td>
           <select id="direction" class="form-control" formControlName="direction">
-            <option value="" disabled>Choose direction</option>
-            <option [ngValue]="d.name" *ngFor="let d of directionList">
-              {{d.name}}
-            </option>
+            <option value="" disabled selected>Choose direction</option>
+            <option value="North">North</option>
+            <option value="South">South</option>
+            <option value="East">East</option>
+            <option value="West">West</option>
           </select>
         </td>
       </tr>
