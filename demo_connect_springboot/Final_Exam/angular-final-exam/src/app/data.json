@@ -1,0 +1,148 @@
+{
+  "postList": [
+    {
+      "id": 1,
+      "category": "Nhà Đát",
+      "region": "Miền Bắc",
+      "user": "Cá nhân",
+      "purpose": "Cần bán",
+      "status": "Mới",
+      "address": "Hà Nội",
+      "area": "100",
+      "direction": "Đông",
+      "title": "Nhà Hà Nội cần bán",
+      "content": "Bán nhà 100m2 hướng đông",
+      "price": "500000"
+    },
+    {
+      "category": "Nhà đất",
+      "region": "Miền Trung",
+      "user": "Cá nhân",
+      "purpose": "Cần bán",
+      "status": "Mới",
+      "address": "Huế",
+      "area": "21",
+      "direction": "Tây",
+      "title": "Nhà cần bán",
+      "content": "Nhà 21m2 rộng rãi",
+      "price": "100000000",
+      "id": 2
+    },
+    {
+      "category": "Nhà đất",
+      "region": "Miền Nam",
+      "user": "Cá nhân",
+      "purpose": "Cho thuê",
+      "status": "Đã sử dụng",
+      "address": "Sài Gòn",
+      "area": "55",
+      "direction": "Đông",
+      "title": "Cho thuê nhà Quận 1",
+      "content": "Nhà 2 phòng ngủ",
+      "price": "150000000",
+      "id": 3
+    },
+    {
+      "category": "Nhà đất",
+      "region": "Miền Bắc",
+      "user": "Công ty",
+      "purpose": "Cần mua",
+      "status": "Mới",
+      "address": "Hải Phòng",
+      "area": "100",
+      "direction": "Nam",
+      "title": "Cần mua nhà",
+      "content": "Cần mua nhà 3 phòng ngủ cho gia đình",
+      "price": "200000000",
+      "id": 4
+    },
+    {
+      "category": "Nhà đát",
+      "region": "Miền Bắc",
+      "user": "Công ty",
+      "purpose": "Cho thuê",
+      "status": "Đã sử dụng",
+      "address": "Hà Nội",
+      "area": "120",
+      "direction": "Bắc",
+      "title": "Cho thuê nhà 4 phòng ngủ",
+      "content": "Nhà 4 phòng ngủ đầy đủ tiện nghi",
+      "price": "100000000",
+      "id": 5
+    },
+    {
+      "category": "Nhà đất",
+      "region": "Miền Trung",
+      "user": "Công ty",
+      "purpose": "Cần bán",
+      "status": "Đã sử dụng",
+      "address": "Hải Dương",
+      "area": "154",
+      "direction": "Đông",
+      "title": "Bán nhà 2 tầng",
+      "content": "Nhà có ma cần bán gấp",
+      "price": "100000000",
+      "id": 6
+    },
+    {
+      "category": "Nhà đất",
+      "region": "Miền Bắc",
+      "user": "Cá nhân",
+      "purpose": "Cho thuê",
+      "status": "Mới",
+      "address": "Quảng Ninh",
+      "area": "300",
+      "direction": "Đông",
+      "title": "Văn phòng cho thuê",
+      "content": "Văn phòng rộng rãi cho thuê",
+      "price": "100000000",
+      "id": 7
+    },
+    {
+      "category": "Nhà đất",
+      "region": "Miền Trung",
+      "user": "Cá nhân",
+      "purpose": "Cần mua",
+      "status": "Mới",
+      "address": "Đà Nẵng",
+      "area": "100",
+      "direction": "Nam",
+      "title": "Mua nhà",
+      "content": "mua nhà ",
+      "price": "1000000000",
+      "id": 8
+    }
+  ],
+  "direction": [
+    {
+      "id": 1,
+      "name": "Đông"
+    },
+    {
+      "id": 2,
+      "name": "Tây"
+    },
+    {
+      "id": 3,
+      "name": "Nam"
+    },
+    {
+      "id": 4,
+      "name": "Bắc"
+    }
+  ],
+  "region": [
+    {
+      "id": 1,
+      "name": "Miền Bắc"
+    },
+    {
+      "id": 2,
+      "name": "Miền Trung"
+    },
+    {
+      "id": 3,
+      "name": "Miền Nam"
+    }
+  ]
+}

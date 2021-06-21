@@ -1,0 +1,145 @@
+<div class="container-fluid">
+  <form class="form-group w-50 m-auto" [formGroup]="postForm" (ngSubmit)="submit()">
+    <table class="table table-striped">
+      <h3>Create New Post</h3>
+      <tr>
+        <td>Category:</td>
+        <td>
+          <input class="form-control" type="text" formControlName="category"/>
+        </td>
+      </tr>
+      <tr>
+        <td>Region:</td>
+        <td>
+          <select id="region" class="form-control" formControlName="region">
+            <option value="" disabled>Choose region</option>
+            <option [ngValue]="re.name" *ngFor="let re of regionList">
+              {{re.name}}
+            </option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td> User :</td>
+        <td>
+          <input class="ml-5" id="person" type="radio" value="Cá nhân" formControlName="user"/>
+          <label for="person" class="ml-2"> Cá nhân </label>
+          <input id="company" class="ml-5" type="radio" value="Công ty" formControlName="user"/>
+          <label for="company" class="ml-2">Công ty </label>
+        </td>
+      </tr>
+      <tr>
+        <td> Purpose :</td>
+        <td>
+          <input class="ml-5" id="sell" type="radio" value="Cần bán" formControlName="purpose"/>
+          <label for="sell" class="ml-2">Cần bán </label>
+          <input id="buy" class="ml-5" type="radio" value="Cần mua" formControlName="purpose"/>
+          <label for="buy" class="ml-2">Cần mua </label>
+          <input id="forRent" class="ml-5" type="radio" value="Cho thuê" formControlName="purpose"/>
+          <label for="forRent" class="ml-2">Cho thuê </label>
+          <input id="rent" class="ml-5" type="radio" value="Cần Thuê" formControlName="purpose"/>
+          <label for="rent" class="ml-2">Cần Thuê </label>
+        </td>
+      </tr>
+      <tr>
+        <td> Status :</td>
+        <td>
+          <input class="ml-5" id="new" type="radio" value="Mới" formControlName="status"/>
+          <label for="new" class="ml-2">Mới </label>
+          <input id="used" class="ml-5" type="radio" value="Đã sử dụng" formControlName="status"/>
+          <label for="used" class="ml-2">Đã sử dụng </label>
+        </td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td>
+          <input class="form-control" type="text" formControlName="address"/>
+        </td>
+      </tr>
+      <tr>
+        <p style="color: red"
+           *ngIf="postForm.controls.address.hasError('required') &&
+           (postForm.controls.address.dirty || postForm.controls.address.touched)">
+          Address can't empty !
+        </p>
+      </tr>
+      <tr>
+        <td>Area:</td>
+        <td>
+          <input class="form-control" type="text" formControlName="area"/>
+        </td>
+      </tr>
+      <tr>
+        <p style="color: red"
+           *ngIf="postForm.controls.area.hasError('required') &&
+           (postForm.controls.area.dirty || postForm.controls.area.touched)">
+          Area can't empty !
+        </p>
+        <p style="color: red"
+           *ngIf="postForm.controls.area.hasError('min') &&
+           (postForm.controls.area.dirty || postForm.controls.area.touched)">
+          Area should greater than 20
+        </p>
+      </tr>
+      <tr>
+        <td>Direction:</td>
+        <td>
+          <select id="direction" class="form-control" formControlName="direction">
+            <option value="" disabled>Choose direction</option>
+            <option [ngValue]="d.name" *ngFor="let d of directionList">
+              {{d.name}}
+            </option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Title:</td>
+        <td>
+          <input class="form-control" type="text" formControlName="title"/>
+        </td>
+      </tr>
+      <tr>
+        <p style="color: red"
+           *ngIf="postForm.controls.title.hasError('required') &&
+           (postForm.controls.title.dirty || postForm.controls.title.touched)">
+          * Address can't empty !
+        </p>
+      </tr>
+      <tr>
+        <td>Description:</td>
+        <td>
+          <textarea class="form-control" type="text" formControlName="content"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <p style="color: red"
+           *ngIf="postForm.controls.title.hasError('required') &&
+           (postForm.controls.title.dirty || postForm.controls.title.touched)">
+          * Address can't empty !
+        </p>
+      </tr>
+      <tr>
+        <td>Price:</td>
+        <td>
+          <input class="form-control" type="text" formControlName="price"/>
+        </td>
+      </tr>
+      <tr>
+        <p style="color: red"
+           *ngIf="postForm.controls.price.hasError('required') &&
+           (postForm.controls.price.dirty || postForm.controls.price.touched)">
+          Price can't empty !
+        </p>
+        <p style="color: red"
+           *ngIf="postForm.controls.price.hasError('min') &&
+           (postForm.controls.price.dirty || postForm.controls.price.touched)">
+          Price should greater than 10000000
+        </p>
+      </tr>
+      <tr>
+        <button class="btn btn-outline-primary" *ngIf="!postForm.invalid">Submit</button>
+        <button class="btn btn-outline-primary" *ngIf="postForm.invalid" disabled>Submit</button>
+      </tr>
+    </table>
+  </form>
+</div>

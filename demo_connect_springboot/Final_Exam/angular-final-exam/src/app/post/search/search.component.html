@@ -1,0 +1,18 @@
+<div class="row text-center">
+  <div class="container">
+    <h1 class="h1 text-info" style="margin: auto">Searching Box</h1>
+  </div>
+</div>
+<br><br><br>
+<div class="container-fluid">
+  <label for="areaSearch">Search by area: </label>
+  <input type="text" class="form-control" id="areaSearch" [(ngModel)]="areaSearch">
+  <label for="priceSearch">Search by price: </label>
+  <input type="text" class="form-control" id="priceSearch" [(ngModel)]="priceSearch">
+  <label for="directionSearch">Search by direction: </label>
+  <input type="text" class="form-control" id="directionSearch" [(ngModel)]="directionSearch">
+  <br>
+  <div class="text-center">
+    <button class="btn btn-outline-info" (click)="runSearch()">Search</button>
+  </div>
+</div>
